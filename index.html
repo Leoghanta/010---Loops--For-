@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forms and JavaScript Workshop</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/sunburst.css" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+    <script>hljs.highlightAll();</script>
+</head>
+<body>
+    <header>
+        <h1>Workshop 10: Using For Loops in JavaScript</h1>
+    </header>
+
+    <div class="container">
+        <h1>Workshop 10</h1>
+        <p>In JavaScript, a <span class="highlight">for</span> loop is used to repeat a block of code a certain number of times. 
+            It's very useful when you know how many times you want to loop over a block of code.</p>
+
+        <h2>Syntax of a `for` Loop</h2>
+        <p>The basic syntax of a `for` loop looks like this:</p>
+
+        <pre><code class="language-javascript">
+for (initialization; condition; increment/decrement) {
+    // Code to be executed in each iteration
+}
+        </code></pre>
+
+        <p>Here’s what each part means:</p>
+        <ul>
+            <li><strong>Initialization:</strong> This sets the starting value of the loop variable.</li>
+            <li><strong>Condition:</strong> The loop continues as long as this condition is true.</li>
+            <li><strong>Increment/Decrement:</strong> This changes the loop variable after each iteration.</li>
+        </ul>
+
+        <h3>Example 1: Counting from 1 to 5</h3>
+        <pre><code class="language-javascript">
+for (let i = 1; i <= 5; i++) {
+    console.log(i);
+}
+// Output: 1, 2, 3, 4, 5
+        </code></pre>
+
+        <p>This loop starts at 1 and increments by 1 in each iteration, stopping when the value of <code>i</code> exceeds 5.</p>
+
+        <h2>Try It Out: Count from 1 to 10</h2>
+        <p>Use the script.js file to create a function called countToTen(). Use a for loop to display all the numbers from 1 
+           to 10 (inclusive). Use the paragraph with the id "countResult" to display the numbers.
+        </p>
+        <p><button onclick="countToTen()">Click to Count from 1 to 10</button></p>
+        <p class="highlight" id="countResult"></p>
+
+        <h2>Example 2: Looping Through an Array</h2>
+        <p>Sometimes you’ll want to iterate over the elements of an array. A `for` loop can help you do this efficiently.</p>
+
+        <h3>Example: Displaying an Array of Colours</h3>
+        <pre><code class="language-javascript">
+const colours = ["Red", "Green", "Blue", "Yellow"];
+for (let i = 0; i < colours.length; i++) {
+    console.log(colours[i]);
+}
+// Output: Red, Green, Blue, Yellow
+        </code></pre>
+
+        <h2>Try It Out: Display the Colours Array</h2>
+        <p>Use the script.js file to create a function called showColours(). In this function, create an array of five 
+           colours. Use a for loop to display the colours to the screen.  Use the paragraph with the id coloursResult to 
+           display the array.
+        </p>
+        <p><button onclick="showColours()">Click to Display Colours</button></p>
+        <p class="highlight" id="coloursResult"></p>
+
+        <h2>Example 3: Summing Numbers in an Array</h2>
+        <p>Let's take an array of numbers and use a `for` loop to sum the numbers.</p>
+
+        <pre><code class="language-javascript">
+const numbers = [10, 20, 30, 40];
+let sum = 0;
+for (let i = 0; i < numbers.length; i++) {
+    sum += numbers[i]; // Add each number to the sum
+}
+console.log(sum);
+// Output: 100
+        </code></pre>
+
+        <h2>Try It Out: Sum an Array of Numbers</h2>
+        <p>Using the script.js file, create a function called sumNumbers() and create an array of numbers. 
+           initialise a sum variable to 0.  Use a for loop to iterate through the list of numbers and total up 
+           all the numbers in the array. Use the paragraph with the id sumResult to display the total. 
+        </p>
+        <p><button onclick="sumNumbers()">Click to Calculate Sum</button></p>
+        <p class="highlight" id="sumResult"></p>
+
+
+        <h2>Practice Exercise</h2>
+        <ul>
+            <li>Task 1: Write a `for` loop that prints all even numbers from 2 to 20.</li>
+            <li>Task 2: Write a `for` loop that calculates the product of an array of numbers.</li>
+            <li>Task 3: Modify the factorial example from a previous lesson to use a `for` loop instead of recursion.</li>
+        </ul>
+
+    </div>
+
+    <footer>
+        <p>&copy; Your Name - JavaScript Loops Lesson</p>
+    </footer>
+</body>
+</html>
